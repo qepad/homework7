@@ -111,8 +111,10 @@ public class Main {
         var yearsBefore = year - 200;
         var yearsAfter = year + 100;
 
-        for (year = yearsBefore; year >= yearsBefore && year <= yearsAfter; year += 79) {
-            System.out.println(year);
+        for (var years = 0; years <= yearsAfter; years += 79) {
+            if (years > yearsBefore) {
+                System.out.println(years);
+            }
         }
 
     }
