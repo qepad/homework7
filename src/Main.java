@@ -39,10 +39,10 @@ public class Main {
         System.out.println("Задача 3");
         var population = 12_000_000;
         var year = 0;
-        var birth = population * 17 / 1000;
-        var death = population * 8 / 1000;
+        var birth = 17;
+        var death = 8;
         while (year < 10) {
-            population = population + birth - death;
+            population = population + (population * birth / 1000) - (population * death / 1000);
             year++;
             System.out.println("Год " + year + ", численность населения составляет " + population);
         }
