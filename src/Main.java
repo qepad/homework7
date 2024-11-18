@@ -11,7 +11,7 @@ public class Main {
         while (total < 2_459_000) {
             monthNumber++;
             total = total + savings;
-            }
+        }
         System.out.println("Месяц " + monthNumber + ", сумма накоплений равна " + total + " рублей");
 
 
@@ -27,7 +27,7 @@ public class Main {
         System.out.println();
 
         i = 10;
-        for ( ; i > 0; i--) {
+        for (; i > 0; i--) {
             System.out.print(i + " ");
         }
 
@@ -51,27 +51,28 @@ public class Main {
         // task 4
 
         System.out.println("Задача 4");
-        var deposit = 15000;
-        var sum = 0.00;
+        double deposit = 15000;
+        var sum = deposit;
+        monthNumber = 1;
 
-        for (var monthNumber1 = 1; sum < 12_000_000; monthNumber1++) {
-            sum = sum + deposit;
-            sum = sum + (sum / 100 * 7);
-            System.out.printf("Месяц " + monthNumber1 + ", сумма накоплений " + "%.2f\n", sum);
+        for ( ; sum < 12_000_000; monthNumber++) {
+            sum += sum / 100 * 7;
+//            System.out.printf("Месяц " + monthNumber1 + ", сумма накоплений " + "%.2f%s\n", sum, " руб.");
+            System.out.printf("%s%d%s%.2f%s\n", "Месяц ", monthNumber, ", сумма накоплений ", sum, " руб.");
         }
-
 
         // task 5
 
         System.out.println("Задача 5");
         deposit = 15000;
-        sum = 0.00;
+        sum = deposit;
+        monthNumber = 1;
 
-        for (var monthNumber2 = 1; sum < 12_000_000; monthNumber2++) {
-            sum = sum + deposit;
-            sum = sum + (sum / 100 * 7);
-            if (monthNumber2 % 6 == 0) {
-                System.out.printf("Месяц " + monthNumber2 + ", сумма накоплений " + "%.2f\n", sum);
+        for ( ; sum < 12_000_000; monthNumber++) {
+            sum += sum / 100 * 7;
+            if (monthNumber % 6 == 0) {
+//                System.out.printf("Месяц " + monthNumber2 + ", сумма накоплений " + "%.2f\n", sum);
+                System.out.printf("%s%d%s%.2f%s\n", "Месяц ", monthNumber, ", сумма накоплений ", sum, " руб.");
             }
         }
 
@@ -80,16 +81,16 @@ public class Main {
 
         System.out.println("Задача 6");
         deposit = 15000;
-        sum = 0.00;
+        sum = deposit;
         var allMonths = 12 * 9;
-        var monthNumber3 = 0;
+        monthNumber = 0;
 
-        while (monthNumber3 != allMonths) {
-            monthNumber3++;
-            sum = sum + deposit;
-            sum = sum + (sum / 100 * 7);
-            if (monthNumber3 % 6 == 0) {
-                System.out.printf("Месяц " + monthNumber3 + ", сумма накоплений " + "%.2f\n", sum);
+        while (monthNumber != allMonths) {
+            monthNumber++;
+            sum += sum / 100 * 7;
+            if (monthNumber % 6 == 0) {
+//                System.out.printf("Месяц " + monthNumber3 + ", сумма накоплений " + "%.2f\n", sum);
+                System.out.printf("%s%d%s%.2f%s\n", "Месяц ", monthNumber, ", сумма накоплений ", sum, " руб.");
             }
         }
 
